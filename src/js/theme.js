@@ -204,7 +204,9 @@
 
   // wow animate
   const myWow = function () {
-    new WOW().init();
+    window.addEventListener("load", function () {
+      new WOW().init();
+    });
   };
 
   // Smooth Scroll Anchor
