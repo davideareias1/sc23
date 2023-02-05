@@ -310,7 +310,7 @@
   };
 
   // CountDown
-  const countDownDate = new Date("Feb 29, 2023 15:37:25").getTime();
+  const countDownDate = new Date("Mar 12, 2023 22:00:00").getTime();
 
   // Update the count down every 1 second
   const x = setInterval(function () {
