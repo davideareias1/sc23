@@ -15,7 +15,10 @@
 
     <!-- Title  -->
     <title>003D: No time to Waste</title>
-    <meta name="description" content="Summer Course BEST Coimbra" />
+    <meta
+      name="description"
+      content="Get the most out of your summer with the BEST Coimbra course. Join us now!"
+    />
 
     <!-- Development css -->
     <link rel="stylesheet" href="src/css/style.css" />
@@ -631,13 +634,13 @@ href="dist/css/style.css"> -->
                       Survival Guide
                     </p>
                   </div>
-                  <a rel="noopener noreferrer" target="_blank" href="/">
+                  <button onclick="showSurvivalGuide()">
                     <img
                       src="src/img/gif/map.gif"
                       class="max-w-full h-auto mx-auto rounded-full bg-gray-50 md:grayscale w-60 hover:animate-pulse"
                       alt="title image"
                     />
-                  </a>
+                  </button>
                 </div>
               </div>
               <!-- end info block -->
@@ -656,17 +659,13 @@ href="dist/css/style.css"> -->
                       Schedule
                     </p>
                   </div>
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://drive.google.com/file/d/16E_Yaq9UlpEYZCAL0pd0nGdtkU3o7Iqb/view?usp=sharing"
-                  >
+                  <button onclick="showSchedule()">
                     <img
                       src="src/img/gif/calendar.gif"
                       class="max-w-full h-auto mx-auto rounded-lg bg-gray-50 md:grayscale hover:animate-pulse"
-                      alt="title image"
+                      alt="schedule"
                     />
-                  </a>
+                  </button>
                 </div>
               </div>
               <!-- end info block -->
@@ -1485,9 +1484,11 @@ href="dist/css/style.css"> -->
           </header>
           <!-- end section header -->
           <div class="text-center p-5">
-            <h1 class="text-4xl font-semibold mb-10">Applications close in:</h1>
+            <h1 class="text-3xl md:text-4xl font-semibold mb-10">
+              Applications close in:
+            </h1>
             <div
-              class="center md:w-5/12 text-5xl text-primary border-b-4 border-spacing-4 border-secundary font-bold mb-2"
+              class="text-4xl md:text-4xl center md:w-6/12 text-primary border-b-4 border-spacing-4 border-secundary font-bold mb-2"
               id="timer"
             ></div>
             <a
@@ -1872,7 +1873,7 @@ href="dist/css/style.css"> -->
               <div class="flex items-center mb-2">
                 <span
                   class="text-3xl leading-normal mb-2 font-bold text-gray-800 mt-2"
-                  >Summer Course 2023</span
+                  >BEST Course 2023</span
                 >
                 <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
               </div>
@@ -1964,6 +1965,10 @@ href="dist/css/style.css"> -->
                 <!--end instagram-->
               </ul>
             </div>
+            <img
+              src="./src/img/BEST-Courses-Logo.png"
+              class="scale-75 -mt-10"
+            />
           </div>
         </div>
       </div>
@@ -2021,6 +2026,22 @@ href="dist/css/style.css"> -->
     <script src="src/vendors/typed.js/lib/typed.min.js"></script>
     <script src="src/vendors/wow.js/dist/wow.min.js"></script>
     <script src="src/vendors/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      function showSurvivalGuide() {
+        var pdfWindow = window.open("");
+        pdfWindow.document.title = "Survival Guide BEST Summer Course 2023";
+        pdfWindow.document.write(
+          "<iframe src='./src/survival_guide.pdf' width='100%' height='100%'></iframe>"
+        );
+      }
+      function showSchedule() {
+        var pdfWindow = window.open("");
+        pdfWindow.document.title = "Schedule BEST Summer Course 2023";
+        pdfWindow.document.write(
+          "<iframe src='./src/schedule.jpg' width='100%' height='100%'></iframe>"
+        );
+      }
+    </script>
 
     <!-- Start development js -->
     <script src="src/js/theme.js"></script>
