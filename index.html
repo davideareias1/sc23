@@ -369,16 +369,44 @@ href="dist/css/style.css"> -->
               data-wow-duration="1s">
               <!-- info block -->
               <div class="relative overflow-hidden px-6 mt-5">
+                <img src="src/img/gif/touch.gif" alt="touch" class="w-10 absolute right-0 z-1" />
                 <div class="text-center">
                   <p class="text-lg leading-normal font-bold mb-1">
-                    Survival Guide
+                    Materials
                   </p>
                 </div>
-                <button onclick="showSurvivalGuide()">
-                  <img src="src/img/gif/map.gif"
-                    class="max-w-full h-auto mx-auto rounded-full bg-gray-50 md:grayscale w-60 hover:animate-pulse"
+                <button id="more-info-materials-btn">
+                  <img src="src/img/gif/docs.gif"
+                    class="max-w-full h-auto mx-auto rounded-lg bg-gray-50 md:grayscale hover:animate-pulse"
                     alt="title image" />
                 </button>
+                <div id="popup-materials"
+                  class="hidden fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-20">
+                  <div class="bg-primary rounded-md p-4">
+                    <div class="flex">
+                      <h2 class="text-lg text-white">Materials</h2>
+                      <button id="close-modal-materials"
+                        class="pl-52 -mt-5 text-2xl text-gray-50 font-bold bg-secondary border-primary">
+                        x
+                      </button>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                      <a class="text-black font-sans p-2 border-b-2 border-primary bg-secundary w-44 bg-secondary"
+                        onclick="showSyllabus()">
+                        Syllabus & Pre-materials
+                      </a>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                      <a class="text-black font-sans p-2 border-b-2 border-primary bg-secundary w-44 bg-secondary"
+                        onclick="showCvs()">
+                        Professional’s CVs
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <!-- end info block -->
@@ -409,23 +437,22 @@ href="dist/css/style.css"> -->
               data-wow-duration="1s">
               <!-- info block -->
               <div class="relative overflow-hidden px-6 mt-5">
-                <img src="src/img/gif/touch.gif" alt="touch" class="w-10 absolute right-0 z-50" />
                 <div class="text-center">
                   <p class="text-lg leading-normal font-bold mb-1">
                     Contact Us
                   </p>
                 </div>
-                <button id="more-info-btn">
+                <button id="more-info-contactUs-btn">
                   <img src="src/img/gif/email.gif"
                     class="max-w-full h-auto mx-auto rounded-lg bg-gray-50 md:grayscale hover:animate-pulse"
                     alt="title image" />
                 </button>
-                <div id="popup"
+                <div id="popup-contactUs"
                   class="hidden fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-20">
                   <div class="bg-primary rounded-md p-4">
                     <div class="flex">
                       <h2 class="text-lg text-white">Contacts</h2>
-                      <button id="close-modal" class="pl-52 -mt-5 text-2xl text-gray-50 font-bold">
+                      <button id="close-modal-contactUs" class="pl-52 -mt-5 text-2xl text-gray-50 font-bold">
                         x
                       </button>
                     </div>
@@ -449,6 +476,27 @@ href="dist/css/style.css"> -->
                   </div>
                 </div>
               </div>
+            </div>
+            <!-- end info block -->
+          </div>
+          <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:px-6">
+            <div
+              class="relative overflow-hidden bg-white rounded-2xl border-2 border-primary mb-12 hover-grayscale-0 wow fadeInUp"
+              data-wow-duration="1s">
+              <!-- info block -->
+              <div class="relative overflow-hidden px-6 mt-5">
+                <div class="text-center">
+                  <p class="text-lg leading-normal font-bold mb-1">
+                    Survival Guide
+                  </p>
+                </div>
+                <button onclick="showSurvivalGuide()">
+                  <img src="src/img/gif/map.gif"
+                    class="max-w-full h-auto mx-auto rounded-full bg-gray-50 md:grayscale w-60 hover:animate-pulse"
+                    alt="title image" />
+                </button>
+              </div>
+
             </div>
             <!-- end info block -->
           </div>
@@ -1479,6 +1527,20 @@ href="dist/css/style.css"> -->
       pdfWindow.document.title = "Schedule BEST Summer Course 2023";
       pdfWindow.document.write(
         "<iframe src='./src/schedule.jpg' width='100%' height='100%'></iframe>"
+      );
+    }
+    function showCvs() {
+      var pdfWindow = window.open("");
+      pdfWindow.document.title = "Professional’s CVs";
+      pdfWindow.document.write(
+        "<iframe src='./src/cvs.pdf' width='100%' height='100%'></iframe>"
+      );
+    }
+    function showSyllabus() {
+      var pdfWindow = window.open("");
+      pdfWindow.document.title = "Syllabus & Pre-materials";
+      pdfWindow.document.write(
+        "<iframe src='./src/syllabus.pdf' width='100%' height='100%'></iframe>"
       );
     }
   </script>

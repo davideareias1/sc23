@@ -340,18 +340,35 @@
   }, 1000);
 
   document
-    .getElementById("more-info-btn")
+    .getElementById("more-info-materials-btn")
     .addEventListener("click", function () {
-      document.getElementById("popup").classList.remove("hidden");
+      document.getElementById("popup-materials").classList.remove("hidden");
     });
 
-  document.getElementById("close-modal").addEventListener("click", function () {
-    document.getElementById("popup").classList.add("hidden");
+  document
+    .getElementById("more-info-contactUs-btn")
+    .addEventListener("click", function () {
+      document.getElementById("popup-contactUs").classList.remove("hidden");
+    });
+
+  document.getElementById("close-modal-contactUs").addEventListener("click", function () {
+    document.getElementById("popup-contactUs").classList.add("hidden");
   });
 
-  document.getElementById("popup").addEventListener("click", function (e) {
+  document.getElementById("close-modal-materials").addEventListener("click", function () {
+    document.getElementById("popup-materials").classList.add("hidden");
+  });
+
+
+  document.getElementById("popup-contactUs").addEventListener("click", function (e) {
     if (e.target == e.currentTarget) {
-      document.getElementById("popup").classList.add("hidden");
+      document.getElementById("popup-contactUs").classList.add("hidden");
+    }
+  });
+
+  document.getElementById("popup-materials").addEventListener("click", function (e) {
+    if (e.target == e.currentTarget) {
+      document.getElementById("popup-materials").classList.add("hidden");
     }
   });
 
