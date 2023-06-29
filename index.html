@@ -1519,30 +1519,42 @@ href="dist/css/style.css"> -->
       var pdfWindow = window.open("");
       pdfWindow.document.title = "Survival Guide BEST Summer Course 2023";
       pdfWindow.document.write(
+        "<style>@media (max-width: 600px) {iframe { width: 100vw; height: 100vh; }}</style>" +
         "<iframe src='./src/survival_guide.pdf' width='100%' height='100%'></iframe>"
       );
+      pdfWindow.document.close();
     }
+
     function showSchedule() {
       var pdfWindow = window.open("");
       pdfWindow.document.title = "Schedule BEST Summer Course 2023";
       pdfWindow.document.write(
+        "<style>@media (max-width: 600px) {iframe { width: 100vw; height: 100vh; }}</style>" +
         "<iframe src='./src/schedule.jpg' width='100%' height='100%'></iframe>"
       );
+      pdfWindow.document.close();
     }
+
     function showCvs() {
       var pdfWindow = window.open("");
       pdfWindow.document.title = "Professional’s CVs";
       pdfWindow.document.write(
+        "<style>@media (max-width: 600px) {iframe { width: 100vw; height: 100vh; }}</style>" +
         "<iframe src='./src/cvs.pdf' width='100%' height='100%'></iframe>"
       );
+      pdfWindow.document.close();
     }
+
     function showSyllabus() {
       var pdfWindow = window.open("");
       pdfWindow.document.title = "Syllabus & Pre-materials";
       pdfWindow.document.write(
+        "<style>@media (max-width: 600px) {iframe { width: 100vw; height: 100vh; }}</style>" +
         "<iframe src='./src/syllabus.pdf' width='100%' height='100%'></iframe>"
       );
+      pdfWindow.document.close();
     }
+
   </script>
 
   <!-- Start development js -->
